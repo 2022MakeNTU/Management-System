@@ -48,7 +48,7 @@ export default function ItemBox() {
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>
-        prevProgress <= 0 ? 100 : prevProgress - 10,
+        prevProgress <= 0 ? 100 : prevProgress - 0,
       )
     }, 800)
     return () => {
@@ -59,7 +59,7 @@ export default function ItemBox() {
   return (
     <Item>
       <CircularProgressWithLabel value={progress} color={_color} />
-      <Button>refill</Button>
+      <Button size="small">refill</Button>
     </Item>
   )
 }

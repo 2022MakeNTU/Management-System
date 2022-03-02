@@ -3,14 +3,27 @@ import Box from '@mui/material/Box'
 import ItemBox from '../../components/Item'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
+import styled from 'styled-components'
+import Divider from '@mui/material/Divider'
+
+const Caption = styled.section`
+  font-size: 2em;
+  color: black;
+  font-family: 'Times New Roman';
+  opacity: 0.8;
+  // &:hover{color:blue;}
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+`
 
 export default function GridContainer() {
   return (
-    <Box sx={{ width: '100%' }} backgroundColor="#e3f2fd">
-      <Stack direction="column" spacing={4} justifyContent="center">
+    <Box sx={{ width: '100%' }}>
+      <Stack direction="column" spacing={2}>
         <Stack justifyContent="center" direction="row" backgroundColor="white">
-          <Typography variant="h5">Tissue Inventory</Typography>
+          <Caption>Tissue Inventory</Caption>
         </Stack>
+        <Divider />
 
         <Grid
           container
